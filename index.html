@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Key</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="step1">
+    <h1>GET KEY</h1>
+    <p>STEP 1/2</p>
+    <button onclick="getKeyLink()">Get Key</button>
+</div>
+
+<div class="container hidden" id="step2">
+    <h1>KEY GENERATED</h1>
+    <p id="keyText"></p>
+</div>
+
+<button class="admin-btn" onclick="openAdmin()">Admin</button>
+
+<!-- Admin Panel -->
+<div class="admin hidden" id="adminPanel">
+    <h2>Admin Login</h2>
+    <input id="adminUser" placeholder="Username">
+    <button onclick="adminLogin()">Login</button>
+
+    <div id="adminArea" class="hidden">
+        <p>Total keys generated: <span id="keyCount"></span></p>
+
+        <h3>Create Custom Key</h3>
+        <input id="customKey" placeholder="Custom key">
+        <input id="customHours" type="number" placeholder="Valid hours">
+        <button onclick="createCustomKey()">Create</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
